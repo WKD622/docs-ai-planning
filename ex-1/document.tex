@@ -1,0 +1,38 @@
+\input{../input/preamble.tex}
+
+
+\begin{document}
+
+
+\section{Exercise 1}
+
+\subsection{Computing task}
+
+Grid is $10 x 10$, that means we have $100$ fields.
+\newline
+$2$ - for these many times we can choose status for the field (dirty or clean). We have 100 fields, so
+we have to apply this rule to 100 fields:
+\newline
+$2^{100}$ - this is number of all combinations of board's settings.
+\newline
+$100^{5}$ - we have 5 robots. Each of them we can put on a board in 100 ways. 
+\newline
+$20^5$ - each robot has 20 charge levels.
+\newline 
+Number of all states is a multiplication of values mentioned above: 
+$S=2^{100}\cdot100^{5}\cdot20^5$
+\newline
+$T=S \cdot 10^{-6}s= 2^{100} \cdot 100^{5} \cdot 20^5 \cdot 10^{-6}s = 2^{100} \cdot 10^4 \cdot 20^5s$ 
+
+
+
+\subsection{Questions}
+
+\begin{enumerate}
+	\item {In the start it says that Planning works when "Your problem is subject to
+	 frequent change", but heuristics by its nature enforce a rigidity in description of the problem. 
+	 Is this an intended trade-off or if it is an open research problem?}
+	\item { As first, optimal planning has undergone a major boost in the last years, mainly thanks
+	 to heuristic called LM-cut, maybe it will be nice to talk about it?}
+\end{enumerate}
+\end{document}
